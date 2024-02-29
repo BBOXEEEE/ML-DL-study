@@ -4,3 +4,6 @@
 
 # for obsidian
 .obsidian
+
+# for PDF Files
+*.pdf
