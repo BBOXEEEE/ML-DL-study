@@ -26,7 +26,7 @@
 
 이 논문에서 깊게 다루는 문제는 **Degradation Problem** 이다.
 - network 가 깊어질수록 accuracy 떨어지는 문제이다.
-![[Pasted image 20240229225030.png]]
+![[ResNet FIg.1.png]]
 
 흥미로운 점은 **overfitting** 으로 발생하는 문제가 아니라는 것이다. 그 이유는 overfitting 에 의한 문제라면, training accuracy 는 높고, test accuracy 는 낮아야하는데 Fig. 1 에 제시된 그래프에 의하면 두개 다 낮기 때문이다. 따라서, 이 논문에서는 깊은 layer 가 쌓일 수록 optimize 가 복잡해져 발생하는 부작용으로 인식하고 해결하려 한다.
 
@@ -41,7 +41,7 @@
 - H(x) = F(x) + x 라면, 이것은 zero 에 수렴해야한다.
 	- 즉, **residual** 을 **zero** 로 만드는 것이 더 쉽다는 것이다.
 
-![[Pasted image 20240229231037.png]]
+![[ResNet Fig.2.png]]
 
 `F(x) + x` 는 **Shortcut connection** 과 동일한데, 이는 하나 또는 이상의 layer 를 skip 하게 만들어준다.
 위 그림에서 x 는 input, F(x) 과정을 거쳐 identity 인 x가 더해져 output 으로 F(x) + x 가 나오는 형태이다.
