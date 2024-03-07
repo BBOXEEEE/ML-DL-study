@@ -151,4 +151,30 @@ output 은 2048 개의 filter 로 concatenate 되었다.
 
 ### 7. Model Regularization via Lable Smootihng
 
+**LSR (Lable Smoothing Regularization)** 을 적용해 정규화 과정을 추가했다.
+- 2가지 문제를 방지하기 위해 제안한 매커니즘이다.
+	- Overfitting 문제 : model 이 매 학습마다 ground-truth lable 에 full probability 를 할당하면 일반화 성능을 장담할 수 없다.
+	- 이는 largetst logit 과 다른 것들의 차이를 크게 하고, 모델이 adapt 하는 능력을 떨어트린다.
+
+예를 들어, **Lable Smoothing** 을 정답 라벨 [0, 1, 0, 0, 0] 에 적용한다고 했을 때, smoothing parameter 에 따라서 [0.1, 0.6, 0.1, 0.1, 0.1] 과 같이 적용하는 것이다.
+model 이 lable 이 1인 한가지 상황에 집중하는 것보다 다양한 상황에 집중함으로써 일반화 성능이 좋아질 수 있다고 이해했다.
+
+### 8. Training Methodology
+
+학습 방법은 다음과 같다.
+- Tensorflow 의 distributed machine learning system 으로 Kepler GPU 에서 50 replica 를 stochastic gradient 로 학습했다.
+- batch size = 32 이고, epochs = 100 이다.
+- weight decay = 0.9, 최고 성능은 RMSProp (decay=0.9, e=1.0) 으로 달성했다.
+- learning rate = 0.045, 2 epoch 마다 0.94 의 비율로 지수적 감소
+- 2.0 을 threshold 로 gradient clipping
+- evaluation 은 parameter 의 running average 로
+
+### 9. Performance on Lower Resolution Input
+
+### 10. Experimental Results and Comparisons
+
+![](./img/img09.png)
+
+논문에서 아래와 같이 **Inception-v3** 를 정의했다.
+- Inceptionv2 + Auxiliary Classifier + RMSProp + Label Smoothing + Factorized 7×7
 
