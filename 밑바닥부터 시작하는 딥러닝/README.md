@@ -14,7 +14,7 @@
 - **CHAPTER 06.** 학습 관련 기술들
 - **CHAPTER 07.** 합성곱 신경망 (CNN)
 - **CHAPTER 08.** 딥러닝
-- **APPENDIX** Softmax-with-Loss 게층의 계산 그래프
+- **APPENDIX.** Softmax-with-Loss 게층의 계산 그래프
 
 ### 참고 링크
 - Github Repository : https://github.com/WegraLee/deep-learning-from-scratch
