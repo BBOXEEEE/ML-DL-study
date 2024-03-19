@@ -8,3 +8,8 @@
 # for Files
 *.pdf
 *workspace
+
+# for Python
+*.pkl
+*/__pycache__
+*.gz
