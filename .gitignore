@@ -7,9 +7,9 @@
 
 # for Files
 *.pdf
-./Must\ Have\ 데싸노트의\ 실전에서\ 통하는\ 머신러닝/workspace
+*workspace
 
 # for Python
 *.pkl
-*/__pycache__
+*__pycache__
 *.gz
