@@ -196,7 +196,7 @@ print(dW)
 
 매개변수를 갱신할 때 `경사 하강법` 을 이용하며 데이터를 무작위로 선정하기 때문에 **확률적 경사 하강법 (SGD, Stochastic Gradient Descent)** 라고 부른다.
 
-구현한 코드는 [코드 바로가기](../code/Chapter04) 를 참고!
+구현한 코드는 [코드 바로가기](https://github.com/BBOXEEEE/ML-DL-study/tree/master/%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%94%A5%EB%9F%AC%EB%8B%9D/code/Chapter04) 를 참고!
 ### 정리
 
 - 기계학습에서 사용하는 데이터셋은 훈련 데이터와 시험 데이터로 나눠 사용한다.
